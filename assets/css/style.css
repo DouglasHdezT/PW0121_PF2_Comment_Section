@@ -12,6 +12,8 @@
   --theme-text: black;
   --theme-text-inv: white;
   --theme-soft-text-inv: #EEE;
+  --theme-warining: #F0A500;
+  --theme-delete: #91091E;
 
   --theme-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 
@@ -137,7 +139,7 @@ body > * {
   transition: all ease-in-out 250ms;
 }
 
-#comment-form button:hover {
+button:hover {
   transform: scale(1.02);
   border-radius: 0 0.5rem;
   box-shadow: var(--theme-shadow);
@@ -172,4 +174,31 @@ body > * {
   padding: 0 1ch;
 
   text-align: justify;
+}
+
+.single-comment button {
+  border: none;
+  background: var(--theme-delete);
+
+  font-family: "Montserrat", sans-serif;
+  color: var(--theme-text-inv);
+
+  padding: 0.5rem 1rem;
+  transition: all ease-in-out 250ms;
+}
+
+.warning {
+  display: none;
+
+  width: 100%;
+  padding: 1rem;
+
+  background: var(--theme-warining);
+}
+
+.warning > p {
+  font-size: 1.1em;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  color: var(--theme-text-inv);
 }
